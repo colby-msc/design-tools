@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miller Service Company Design Tools</title>
+    <script src="javascript.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <img src="msc-logo.webp" alt="msc logo" width="800" height="172">
+
+    <h1>Miller Service Company Design Tools</h1>
+
+    <div class="grille-size-calculator">
+        <h2>Grille Size Calculator</h2>
+
+        <form action="" method="get" class="grille-form">
+            <label for="airflow">Required Airflow (CFM):</label>
+            <input type="text" id="airflow" name="airflow">
+            <button type="submit" class="grille-button">Calculate</button>
+        </form>
+
+        <div class="output-container">
+            <div>Minimum Grille Area:&nbsp;</div>
+            <div class="grille-area"></div>
+        </div>
+    </div>
+
+    <div class="duct-size-calculator">
+        <h2>Duct Size Calculator</h2>
+
+        <div>// In Development //</div>
+
+    </div>
+
+    <div class="ventilation-calculator">
+        <h2>Ventilation Calculator</h2>
+
+        <form action="" method="get">
+            <div class="ventilation-form-upper">
+                <label for="floor_area">Total Conditioned Floor Area (ft²):</label>
+                <input type="text" id="floor_area" name="floor_area">
+            </div>
+
+            <div>
+                <label for="occupants">Total Number of Occupants (Count):</label>
+                <input type="text" id="occupants" name="occupants">
+                <button type="submit" class="ventilation-button">Calculate</button>
+            </div>
+        </form>
+
+        <div class="ventilation-output-container">
+            <div>Required Minimum Continuous Ventilation Airflow:</div>
+            <div class="ventilation-airflow">&nbsp;</div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>

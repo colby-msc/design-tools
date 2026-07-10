@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(163, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+h1 {
+    color: white;
+    margin: 20px 0 20px 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.grille-size-calculator,
+.duct-size-calculator,
+.ventilation-calculator {
+    /* height: 200px;
+    width: 500px; */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 40px;
+    box-shadow: 5px 5px 5px rgb(68, 68, 68);
+}
+
+.grille-form {
+    margin: 10px 0 10px 0;
+}
+
+#airflow,
+#floor_area,
+#occupants {
+    width: 50px;
+}
+
+.output-container {
+    display: flex;
+}
+
+.duct-size-calculator {
+    margin: 40px 0 40px 0;
+}
+
+.ventilation-calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ventilation-form-upper {
+    margin-bottom: 10px;
+}
+
+.ventilation-airflow {
+    margin-top: 10px;
+}
