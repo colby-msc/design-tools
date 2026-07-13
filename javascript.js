@@ -6,7 +6,7 @@ function calculateMinimumGrilleArea(requiredAirflow) {
 
     const minimumGrilleArea = (minimumFreeArea / assumedOpenGrilleArea);
 
-    return `${Math.ceil(minimumGrilleArea)} sq. in.`;
+    return `${Math.ceil(minimumGrilleArea)} in²`;
 
 }
 
@@ -17,6 +17,41 @@ function calculateMinimumVentilation(conditionedFloorArea, occupants) {
     const requiredMinimumContinuousVentilationAirflow = (floorAreaVentilationFactor * conditionedFloorArea) + (occupantVentilationRate * occupants);
 
     return `${Math.ceil(requiredMinimumContinuousVentilationAirflow)} CFM`;
+}
+
+function calculateDuctSize(requiredAirflow) {
+    let roundDuctDiameter;
+
+    if (requiredAirflow <= 15) {
+        roundDuctDiameter = 4;
+    } else if (requiredAirflow <= 46) {
+        roundDuctDiameter = 5;
+    } else if (requiredAirflow <= 75) {
+        roundDuctDiameter = 6;
+    } else if (requiredAirflow <= 110) {
+        roundDuctDiameter = 7;
+    } else if (requiredAirflow <= 160) {
+        roundDuctDiameter = 8;
+    } else if (requiredAirflow <= 220) {
+        roundDuctDiameter = 9;
+    } else if (requiredAirflow <= 290) {
+        roundDuctDiameter = 10;
+    } else if (requiredAirflow <= 460) {
+        roundDuctDiameter = 12;
+    } else if (requiredAirflow <= 700) {
+        roundDuctDiameter = 14;
+    } else if (requiredAirflow <= 1000) {
+        roundDuctDiameter = 16;
+    } else if (requiredAirflow <= 1300) {
+        roundDuctDiameter = 18;
+    } else if (requiredAirflow <= 1700) {
+        roundDuctDiameter = 20;
+    } else {
+        return "CFM Currently Not Calculable";
+    }
+
+    return `${roundDuctDiameter}"`;
+
 }
 
 const airflowOutput = document.querySelector("#airflow");
@@ -44,6 +79,19 @@ ventilationButton.addEventListener("click", () => {
     const occupantsSelection = occupantsOutput.value;
 
     ventilationAirflow.textContent = calculateMinimumVentilation(floorAreaSelection, occupantsSelection);
+
+    event.preventDefault();
+});
+
+const ductAirflowOutput = document.querySelector("#duct-airflow");
+const ductButton = document.querySelector(".duct-button");
+const ductSize = document.querySelector(".duct-size");
+
+ductButton.addEventListener("click", () => {
+
+    const selection = ductAirflowOutput.value;
+
+    ductSize.textContent = calculateDuctSize(selection);
 
     event.preventDefault();
 });

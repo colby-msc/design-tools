@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+body,
+html {
+    height: 100%;
+}
+
 body {
     background-color: rgb(163, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 img {
@@ -27,6 +33,13 @@ h2 {
     text-align: center;
 }
 
+.tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
 .grille-size-calculator,
 .duct-size-calculator,
 .ventilation-calculator {
@@ -38,13 +51,15 @@ h2 {
     box-shadow: 5px 5px 5px rgb(68, 68, 68);
 }
 
-.grille-form {
+.grille-form,
+.duct-form {
     margin: 10px 0 10px 0;
 }
 
 #airflow,
 #floor_area,
-#occupants {
+#occupants,
+#duct-airflow {
     width: 50px;
 }
 
@@ -54,6 +69,10 @@ h2 {
 
 .duct-size-calculator {
     margin: 40px 0 40px 0;
+}
+
+.note {
+    margin-top: 10px;
 }
 
 .ventilation-calculator {
@@ -68,4 +87,9 @@ h2 {
 
 .ventilation-airflow {
     margin-top: 10px;
+}
+
+.footer {
+    color: white;
+    margin-bottom: 20px;
 }
