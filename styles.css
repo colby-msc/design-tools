@@ -19,7 +19,9 @@ body {
 
 img {
     margin: 20px 0 20px 0;
-    padding: 10px;
+    /* padding: 10px; */
+    padding: 20px 40px;
+
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
 }
@@ -35,14 +37,20 @@ h2 {
 
 .tools {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
     height: 100%;
+    width: 75%;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .grille-size-calculator,
 .duct-size-calculator,
-.ventilation-calculator {
+.ventilation-calculator,
+.hvac-definitions,
+.links {
     /* height: 200px;
     width: 500px; */
     background-color: white;
@@ -63,33 +71,79 @@ h2 {
     width: 50px;
 }
 
-.output-container {
+.output-container,
+.round-output-container {
     display: flex;
 }
 
-.duct-size-calculator {
-    margin: 40px 0 40px 0;
-}
-
-.note {
+.dimensions-output-container {
     margin-top: 10px;
 }
 
-.ventilation-calculator {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.grille-dimensions {
+    margin-top: 10px;
+}
+
+/* .duct-size-calculator {
+    margin: 40px 0 40px 0;
+} */
+
+.rectangular-output-container {
+    margin-top: 10px;
+}
+
+.rectangular-duct-size {
+    margin-top: 10px;
+
+}
+
+.ashrae {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+}
+
+.ventilation-form {
+    margin-bottom: 10px;
 }
 
 .ventilation-form-upper {
-    margin-bottom: 10px;
+    margin: 10px 0 10px 0;
 }
 
 .ventilation-airflow {
     margin-top: 10px;
 }
 
+.hvac-definitions {
+    height: 200px;
+}
+
+.hvac-definitions-content {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    height: 123px;
+    overflow: auto;
+}
+
+.definitions-subtitle {
+    font-weight: bold;
+}
+
+.links-content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
 .footer {
     color: white;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }

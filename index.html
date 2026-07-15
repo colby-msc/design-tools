@@ -12,9 +12,9 @@
 
     <div class="header"><img src="msc-logo.webp" alt="msc logo" width="800" height="172"></div>
 
-    <div class="tools">
+    <h1>Miller Service Company Design Tools</h1>
 
-        <h1>Miller Service Company Design Tools</h1>
+    <div class="tools">
 
         <div class="grille-size-calculator">
             <h2>Grille Size Calculator</h2>
@@ -22,6 +22,7 @@
             <form action="" method="get" class="grille-form">
                 <label for="airflow">Required Airflow (CFM):</label>
                 <input type="text" id="airflow" name="airflow">
+
                 <button type="submit" class="grille-button">Calculate</button>
             </form>
 
@@ -29,6 +30,12 @@
                 <div>Minimum Grille Area:&nbsp;</div>
                 <div class="grille-area"></div>
             </div>
+
+            <div class="dimensions-output-container">
+                <div>Minimum Grille Dimensions:&nbsp;</div>
+                <div class="grille-dimensions">&nbsp;</div>
+            </div>
+
         </div>
 
         <div class="duct-size-calculator">
@@ -40,19 +47,24 @@
                 <button type="submit" class="duct-button">Calculate</button>
             </form>
 
-            <div class="output-container">
+            <div class="round-output-container">
                 <div>Round Duct Diameter:&nbsp;</div>
-                <div class="duct-size"></div>
+                <div class="round-duct-size"></div>
             </div>
 
-            <div class="note">// Rectangular Duct Dimensions in Development //</div>
+            <div class="rectangular-output-container">
+                <div>Rectangular Equivalents:&nbsp;</div>
+                <div class="rectangular-duct-size">&nbsp;</div>
+            </div>
 
         </div>
 
         <div class="ventilation-calculator">
             <h2>Ventilation Calculator</h2>
 
-            <form action="" method="get">
+            <div class="ashrae">Based on ASHRAE 62.2 Standard</div>
+
+            <form action="" method="get" class="ventilation-form">
                 <div class="ventilation-form-upper">
                     <label for="floor_area">Total Conditioned Floor Area (ft²):</label>
                     <input type="text" id="floor_area" name="floor_area">
@@ -72,9 +84,173 @@
 
         </div>
 
+        <div class="hvac-definitions">
+            <h2>HVAC Definitions</h2>
+
+            <div class="hvac-definitions-content">
+                <div class="terms">
+                    <div class="definitions-subtitle">Term</div>
+                    <div>CFM</div>
+                    <div>FPM</div>
+                    <div>Static Pressure (SP)</div>
+                    <div>Velocity Pressure (VP)</div>
+                    <div>Total Pressure (TP)</div>
+                    <div>External Static Pressure (ESP)</div>
+                    <div>Pressure Drop</div>
+                    <div>Pascal (Pa)</div>
+                    <div>Enthalpy (h)</div>
+                    <div>Entropy (s)</div>
+                    <div>Sensible Heat</div>
+                    <div>Latent Heat</div>
+                    <div>Sensible Heat Equation</div>
+                    <div>Latent Heat Equation</div>
+                    <div>Total Heat (Enthalpy) Equation</div>
+                    <div>Design Temperature</div>
+                    <div>Sensible Load</div>
+                    <div>Latent Load</div>
+                    <div>Total Load</div>
+                    <div>Infiltration Load</div>
+                    <div>Diversity Factor</div>
+                    <div>Nominal Capacity</div>
+                    <div>Net Capacity</div>
+                    <div>Equipment Match-Up</div>
+                    <div>Dehumidification Performance</div>
+                    <div>Friction Rate (FR)</div>
+                    <div>Equivalent Length</div>
+                    <div>Effective Duct Length (EDL)</div>
+                    <div>Fitting Loss Coefficient (CL)</div>
+                    <div>Balancing</div>
+                    <div>Throw</div>
+                    <div>Spread</div>
+                    <div>Drop</div>
+                    <div>NC (Noise Criteria)</div>
+                    <div>ADPI</div>
+                    <div>Zone</div>
+                    <div>Bypass Damper</div>
+                    <div>Dump Zone</div>
+                    <div>Zone Priority</div>
+                    <div>Psychrometric Chart</div>
+                    <div>Dew Point</div>
+                    <div>Relative Humidity (RH)</div>
+                    <div>Grains of Moisture</div>
+                    <div>Specific Volume</div>
+                </div>
+
+                <div class="units">
+                    <div class="definitions-subtitle">Units/Equation</div>
+                    <div>Cubic Feet per Minute</div>
+                    <div>Feet per Minute</div>
+                    <div>in. w.c.</div>
+                    <div>in. w.c.</div>
+                    <div>in. w.c.</div>
+                    <div>in. w.c.</div>
+                    <div>in. w.c. or Pa</div>
+                    <div>1 in. w.c. = 249 Pa</div>
+                    <div>BTU/lb dry air</div>
+                    <div>BTU/lb·R</div>
+                    <div>BTU/hr</div>
+                    <div>BTU/hr</div>
+                    <div>Q_s = 1.08 × CFM × ∆T</div>
+                    <div>Q_l = 0.68 × CFM × ∆Gr</div>
+                    <div>Q_t = 4.5 × CFM × ∆h</div>
+                    <div>°F</div>
+                    <div>BTU/hr</div>
+                    <div>BTU/hr</div>
+                    <div>BTU/hr</div>
+                    <div>BTU/hr</div>
+                    <div>-</div>
+                    <div>BTU/hr or Tons</div>
+                    <div>BTU/hr</div>
+                    <div>-</div>
+                    <div>-</div>
+                    <div>in. w.c./100 ft</div>
+                    <div>ft</div>
+                    <div>ft</div>
+                    <div>-</div>
+                    <div>-</div>
+                    <div>ft</div>
+                    <div>° or ft</div>
+                    <div>ft</div>
+                    <div>-</div>
+                    <div>-</div>
+                    <div>-</div>
+                    <div>-</div>
+                    <div>-</div>
+                    <div>-</div>
+                    <div>-</div>
+                    <div>°F</div>
+                    <div>%</div>
+                    <div>gr/lb dry air</div>
+                    <div>ft³/lb dry air</div>
+                </div>
+
+                <div class="definitions">
+                    <div class="definitions-subtitle">Definition</div>
+                    <div>Air volume flow rate through ducts or equipment</div>
+                    <div>Air velocity through a duct; CFM ÷ duct area</div>
+                    <div>Air pressure inside duct not due to velocity</div>
+                    <div>Pressure from moving air; proportional to velocity²</div>
+                    <div>Sum of static + velocity pressure</div>
+                    <div>System resistance blower must overcome (ducts, coils, filters)</div>
+                    <div>Loss of pressure across filters, coils, fittings, ducts</div>
+                    <div>SI unit of pressure (listed for conversion reference)</div>
+                    <div>Total heat content: sensible + latent</div>
+                    <div>Measure of disorder/energy dispersion</div>
+                    <div>Heat that changes air temperature only</div>
+                    <div>Heat associated with moisture change</div>
+                    <div>BTU/hr sensible heat transfer</div>
+                    <div>BTU/hr latent heat transfer (∆Gr = grain difference)</div>
+                    <div>BTU/hr total heat transfer (∆h = enthalpy diff)</div>
+                    <div>Indoor and outdoor design conditions</div>
+                    <div>Heat load that changes air temperature</div>
+                    <div>Moisture load that changes humidity</div>
+                    <div>Sensible + latent load</div>
+                    <div>Load due to outdoor air leakage</div>
+                    <div>Adjustment recognizing not all loads peak at once</div>
+                    <div>Manufacturer-rated capacity</div>
+                    <div>Actual equipment capacity under conditions</div>
+                    <div>Proper pairing of indoor/outdoor units</div>
+                    <div>Latent moisture removal capability</div>
+                    <div>Pressure drop per 100 ft duct</div>
+                    <div>Straight length + fitting resistance</div>
+                    <div>Longest run incl. fittings</div>
+                    <div>Resistance of fittings/elbows/tees</div>
+                    <div>Adjustment of dampers for correct airflow</div>
+                    <div>Distance supply air travels before slowing</div>
+                    <div>Divergence of air stream from diffuser</div>
+                    <div>Vertical fall of conditioned air stream</div>
+                    <div>Sound rating of diffusers/registers</div>
+                    <div>Air diffusion performance comfort index</div>
+                    <div>Area with independent thermostat control</div>
+                    <div>Redirects excess airflow (not recommended)</div>
+                    <div>Zone used to relieve excess airflow</div>
+                    <div>Control logic for airflow distribution</div>
+                    <div>Graph showing air properties (T, RH, enthalpy)</div>
+                    <div>Temperature where condensation occurs</div>
+                    <div>Moisture in air vs maximum it can hold</div>
+                    <div>Moisture content (7,000 gr = 1 lb water)</div>
+                    <div>Air volume per lb of dry air</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="links">
+            <h2>Useful Links</h2>
+
+            <div class="links-content">
+                <a href="https://mitek.my.site.com/customerexperience/s/article/Wrightsoft-Load-Crash-Course?language=en_US">Wrightsoft Crash Course</a>
+                <a href="https://app.fieldwire.com/index/projects">Fieldwire</a>
+                <a href="https://www.lennoxpros.com/?rememberUserRegion=true">Lennox Pros</a>
+            </div>
+        </div>
+
     </div>
 
-    <div class="footer">Created by Colby Richie on Jul 2026</div>
+    <div class="footer">
+        <div>Minimum Grille Dimensions and Rectangular Duct Equivalents are only a reference for quick sizing purposes; they do not represent all of the possible sizing options in a given senario.</div>
+        <div>Created by Colby Richie on Jul 2026</div>
+    </div>
 
 
     
